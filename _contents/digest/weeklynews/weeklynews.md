@@ -1,193 +1,305 @@
-# 한 주 요약
-매주 커뮤니티 리뷰를 거친, 이번 주 가장 가치있는 소식 모음입니다. 
-매주 수요일 업데이트 됩니다. 
+# 📕 Evaluating AI System
+### Your weekly digest of the most important developments in the LLM ecosystem.
 
+<!-- Treemap with In-Block Drill-down -->
+```{raw} html
+<div style="font-family: Arial, sans-serif; margin-bottom: 2rem;">
+  <h3 style="text-align: center; margin-bottom: 1rem; color: #333;">📊 LLM Buzz Share This Week <span style="font-size:0.8rem; color:#666;">(클릭해서 확대)</span></h3>
+  
+  <div id="treemap-container" style="position: relative; height: 320px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    
+    <!-- Normal View -->
+    <div id="treemap-normal" style="display: flex; gap: 4px; height: 100%;">
+      <!-- Left Column -->
+      <div style="flex: 2; display: flex; flex-direction: column; gap: 4px;">
+        <div onclick="zoomIn('openai')" style="flex: 2; background: linear-gradient(135deg, #e74c3c, #c0392b); color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
+          <div><b style="font-size: 1.4rem;">OpenAI</b><br>API Pricing<br><small style="opacity:0.7;">🔍 클릭</small></div>
+        </div>
+        <div style="flex: 1; display: flex; gap: 4px;">
+          <div onclick="zoomIn('opensource')" style="flex: 2; background: linear-gradient(135deg, #27ae60, #1e8449); color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; cursor: pointer;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
+            <div><b>Open Source</b></div>
+          </div>
+          <div style="flex: 1; background: #7f8c8d; color: white; display: flex; align-items: center; justify-content: center; font-size: 0.8rem;">Rumors</div>
+        </div>
+      </div>
+      <!-- Middle Column -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+        <div onclick="zoomIn('anthropic')" style="flex: 1.2; background: linear-gradient(135deg, #f1c40f, #d4ac0d); color: #333; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8px; cursor: pointer;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
+          <div><b>Anthropic</b></div>
+        </div>
+        <div style="flex: 0.6; background: #95a5a6;"></div>
+        <div style="flex: 1; display: flex; gap: 4px;">
+          <div style="flex: 1; background: linear-gradient(135deg, #e67e22, #d35400); color: white; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.75rem;">Multi</div>
+          <div style="flex: 1; background: linear-gradient(135deg, #9b59b6, #8e44ad); color: white; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.75rem;">Reg</div>
+        </div>
+      </div>
+      <!-- Right Column -->
+      <div onclick="zoomIn('agent')" style="flex: 1.2; background: linear-gradient(135deg, #3498db, #2980b9); color: white; display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; cursor: pointer;" onmouseover="this.style.filter='brightness(1.1)'" onmouseout="this.style.filter='brightness(1)'">
+        <div><b style="font-size: 1.1rem;">Agent</b><br>Framework<br><small style="opacity:0.7;">🔍</small></div>
+      </div>
+    </div>
 
-## [2025/07/07 ~ 2025/07/13] 주간 소식
-## 5점
+    <!-- Zoomed Views (hidden by default) -->
+    <div id="zoom-openai" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #e74c3c, #c0392b); padding: 20px; box-sizing: border-box; color: white;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin:0;">🔴 OpenAI - API Pricing Change</h4>
+        <button onclick="zoomOut()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer;">← 돌아가기</button>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; height: calc(100% - 50px);">
+        <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <b style="font-size: 1.2rem;">가격 인상</b><br><span style="font-size: 2rem;">+45%</span>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <b style="font-size: 1.2rem;">GPT-5 루머</b><br><span style="font-size: 2rem;">+30%</span>
+        </div>
+        <div style="flex: 1; min-width: 120px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; text-align: center;">
+          <b style="font-size: 1.2rem;">Sora 업데이트</b><br><span style="font-size: 2rem;">+15%</span>
+        </div>
+      </div>
+    </div>
 
-### 1. Claude Code가 이제 훅(hooks)을 지원함
-• Claude Code에 사용자 정의 훅 기능이 도입. LLM의 선택에 의존하지 않고, 앱의 행동을 더욱 정확하고 반복적으로 제어할 수 있음
-• 알림 커스터마이징, 코드 자동 포맷팅, 명령 로그 추적과 같은 다양한 자동화가 가능
-• 명령어 실행 전/후, 알림 발생, 응답 완료 시점 등에서 동작하며, 설정 파일을 통해 프로젝트·사용자·엔터프라이즈 레벨로 관리할 수 있음
-• 설정 파일 구조와 매처(matcher) 방식을 통해, 특정 도구 호출 시점에 특정 훅만 실행할 수 있음
-• 입력은 JSON 포맷으로 전달되고, 출력은 exit code 또는 JSON으로 결과·피드백을 제어함
-• 훅은 셸 명령어를 사용자의 전체 권한으로 자동 실행하므로, 보안 및 안전에 대한 주의 필요함
+    <div id="zoom-agent" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #3498db, #2980b9); padding: 20px; box-sizing: border-box; color: white;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin:0;">🔵 Agent Framework - Major Release</h4>
+        <button onclick="zoomOut()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer;">← 돌아가기</button>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; height: calc(100% - 50px);">
+        <div style="flex: 1; min-width: 100px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center;"><b>LangGraph 2.0</b><br>스테이트 머신</div>
+        <div style="flex: 1; min-width: 100px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center;"><b>CrewAI</b><br>멀티에이전트</div>
+        <div style="flex: 1; min-width: 100px; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center;"><b>AutoGen</b><br>MS 오픈소스</div>
+      </div>
+    </div>
 
-> **Why it matters:** 
-> 내용 없음
+    <div id="zoom-anthropic" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #f1c40f, #d4ac0d); padding: 20px; box-sizing: border-box; color: #333;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin:0;">🟡 Anthropic - Tooling Update</h4>
+        <button onclick="zoomOut()" style="background: rgba(0,0,0,0.1); border: none; color: #333; padding: 8px 15px; border-radius: 5px; cursor: pointer;">← 돌아가기</button>
+      </div>
+      <div style="display: flex; gap: 10px; height: calc(100% - 50px);">
+        <div style="flex: 1; background: rgba(0,0,0,0.1); padding: 15px; border-radius: 8px; text-align: center; display: flex; align-items: center; justify-content: center;"><b>MCP 프로토콜</b></div>
+        <div style="flex: 1; background: rgba(0,0,0,0.1); padding: 15px; border-radius: 8px; text-align: center; display: flex; align-items: center; justify-content: center;"><b>Claude 3.5 업데이트</b></div>
+      </div>
+    </div>
 
-### 2. Firestarter - 웹사이트 콘텐츠를 바탕으로 AI Chatbot을 만들어주는 오픈소스 프로젝트
-Firestarter는 URL만 입력하면 웹사이트를 자동으로 크롤링·벡터화해 곧바로 RAG 기반 AI 챗봇을 배포해 주는 MIT 오픈소스 프로젝트다. Firecrawl로 콘텐츠를 Markdown 형태로 긁어오고, Upstash Search에 임베딩·인덱싱한 뒤 Next.js 15·Vercel AI SDK를 이용해 스트리밍 인터페이스와 OpenAI 호환 REST 엔드포인트를 제공한다.
-사용자는 복잡한 인프라 없이도 /create API로 챗봇을 만들고 /query로 질의를 보낼 수 있으며, 생성된 챗봇은 OpenAI·Anthropic·Groq 순 우선순위에 따라 LLM을 호출한다. 크롤링 깊이·LLM 우선순위·챗봇 생성 활성화 여부 같은 파라미터는 firestarter.config.ts에서 간단히 조정할 수 있어 자가 호스팅이나 기능 확장이 용이하다.
-DocsGPT / LangChain 같은 기존 RAG 툴과 달리 Firestarter는 **“즉시 사용 가능”**과 OpenAI-호환 API를 강점으로 내세운다. 개발자 문서, FAQ, 고객 지원 사이트를 빠르게 “대화형 데이터 소스”로 전환할 수 있어 커뮤니티·기업 채택이 빠르게 늘고 있다.
+    <div id="zoom-opensource" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(135deg, #27ae60, #1e8449); padding: 20px; box-sizing: border-box; color: white;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+        <h4 style="margin:0;">🟢 Open Source Eval</h4>
+        <button onclick="zoomOut()" style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 8px 15px; border-radius: 5px; cursor: pointer;">← 돌아가기</button>
+      </div>
+      <div style="display: flex; gap: 10px; height: calc(100% - 50px);">
+        <div style="flex: 1; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center; display: flex; align-items: center; justify-content: center;"><b>LMSys 벤치마크</b></div>
+        <div style="flex: 1; background: rgba(255,255,255,0.15); padding: 15px; border-radius: 8px; text-align: center; display: flex; align-items: center; justify-content: center;"><b>HuggingFace 리더보드</b></div>
+      </div>
+    </div>
 
-> **Why it matters:** 
-> 대규모 파라미터 LLM을 “외부 지식과 결합”해 쓰는 RAG 트렌드가 폭발하는 가운데, Firestarter는 “URL → 챗봇” 워크플로를 1분으로 단축해 진입장벽을 크게 낮췄다. OpenAI-호환 API를 그대로 내주므로 기존 앱·슬랙봇·플러그인에 거의 수정 없이 붙일 수 있고, 다중 LLM·서버리스 벡터 DB·스트리밍 UI 조합은 현행 생산성 툴 스택과 잘 맞물린다. 반대로 단점도 뚜렷하다:
-> 1. Firecrawl·Upstash·LLM 호출 비용 및 개인정보 이슈가 외부 서비스 종속성을 남긴다.
-> 2. 동적 SPA·로그인 벽 등 복잡한 사이트는 크롤링 품질이 떨어질 수 있다.
-> 3. 기본 우선순위가 GPT-4o 중심이라 토큰 비용이 급증할 수 있고, 제한적 크롤링 깊이(기본 10 페이지)는 대형 사이트 지원 시 추가 튜닝이 필요하다. 그럼에도 오픈소스·구성 단순화라는 강점 덕분에, LLM 접목 챗봇·검색 서비스 분야에서 당분간 표준 툴킷 역할을 할 가능성이 높다.
+  </div>
 
-### 3. MCPJam Inspector: MCP Server의 시각적 디버깅을 위한 Web UI 기반 도구
-요약 없음
+  <script>
+    function zoomIn(id) {
+      document.getElementById('treemap-normal').style.display = 'none';
+      document.getElementById('zoom-' + id).style.display = 'block';
+    }
+    function zoomOut() {
+      document.querySelectorAll('[id^="zoom-"]').forEach(el => el.style.display = 'none');
+      document.getElementById('treemap-normal').style.display = 'flex';
+    }
+  </script>
+</div>
+```
 
-> **Why it matters:** 
-> 내용 없음
+<!-- Dashboard KPI Section -->
+::::{grid} 4
+:gutter: 3
 
-## 4점
+:::{grid-item-card} 총 뉴스 수
+:class-header: bg-dark text-white text-center font-weight-bold
+:class-body: bg-secondary text-white text-center
+:shadow: md
+## 685건
+{badge}`+18% 🟢`
+:::
 
-### 1. OpenAI Agents SDK를 사용하여 개발한 고객 서비스(CS) Agents Demo 프로젝트 공개
-OpenAI 에서 발표한 LLM Agents Demo
-GPT API를 활용해서 서비스를 만들기 쉽게 해줌
-파이썬, next.js 기반의 데모 프로그렘을 배포중
-(실제 상담사 시나리오에 기반한 다중 에이전트 오케스트레이션,
-실시간 채팅, guardrail(가드레일, 주제 이탈 및 보안 탐지) 기능 포함)
+:::{grid-item-card} 신규 키워드
+:class-header: bg-dark text-white text-center font-weight-bold
+:class-body: bg-secondary text-white text-center
+:shadow: md
+## 42개
+{badge}`+9% 🟢`
+:::
 
-> **Why it matters:** 
-> 서비스에 AI를 접목시키고 싶을 때 사용할만한 참고 자료
+:::{grid-item-card} 급상승 키워드
+:class-header: bg-dark text-white text-center font-weight-bold
+:class-body: bg-secondary text-white text-center
+:shadow: md
+## 9개
+{badge}`+3% 🟢`
+:::
 
-## 3점
+:::{grid-item-card} 커버리지 출처
+:class-header: bg-dark text-white text-center font-weight-bold
+:class-body: bg-secondary text-white text-center
+:shadow: md
+## 31개
+:::::
+::::
 
-### 1. Can We Improve Llama 3’s Reasoning Through Post-Training Alone? ASTRO Shows +16% to +20% Benchmark Gains
-파인튜닝 프레임워크 Astro에 대한 내용
-논리적으로 복잡한 문제를 만났을때
-MCTS(몬테카를로 트리 탐색)과 같은 과정을 통해
-추론경로를 탐색하고,
-CoT 로 추론 과정을 판단(추론 성공? 실패? 실패했다면 그 원인?)
-해당 과정을 기록하여 새로운 학습 데이터로 사용.
-복잡한 문제에 대해서
-간단한 양식이 아닌 논리적이고 체계적인 양식을 사용하게됨
-MATH 500, AMC 2023, AIME 2024등의 밴치마크에서 16~20%의 점수가 상승함
+<br>
 
-> **Why it matters:** 
-> 논리의 상승을 위해 아키텍쳐 변경이 아닌 파인튜닝 데이터 자동생성을 하고, 유의미한 성과를 거둠
+## 📰 최근 뉴스
 
-### 2. LMCache: LLM 서빙 효율성을 높여주는 캐시 시스템
-LMCache는 재사용 가능한 텍스트의 KV 캐시를 GPU, CPU, 디스크에 저장하고 이를 다양한 LLM 서빙 인스턴스에서 효율적으로 공유할 수 있도록 합니다.
+```{raw} html
+<div style="font-family: Arial, sans-serif; display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
 
-> **Why it matters:** 
-> 내용 없음
+  <!-- News 1 -->
+  <div style="background: white; border-left: 4px solid #e74c3c; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+        <span style="background: #e74c3c; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">OpenAI</span>
+        <span style="color: #666; font-size: 0.85rem;">📅 2025.12.17</span>
+      </div>
+      <b style="font-size: 1rem; color: #333;">GPT-5 Turbo 출시 임박, API 가격 30% 인하 발표</b>
+    </div>
+    <span style="color: #e74c3c; font-size: 1.5rem;">→</span>
+  </div>
 
-### 3. Cairn: GitHub 저장소와 연동하는 오픈소스 S/W 엔지니어링 자동화 에이전트(End-to-End SWE Agent)
-요약 없음
+  <!-- News 2 -->
+  <div style="background: white; border-left: 4px solid #3498db; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+        <span style="background: #3498db; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Agent</span>
+        <span style="color: #666; font-size: 0.85rem;">📅 2025.12.16</span>
+      </div>
+      <b style="font-size: 1rem; color: #333;">LangGraph 2.0 정식 출시 - 멀티 에이전트 오케스트레이션</b>
+    </div>
+    <span style="color: #3498db; font-size: 1.5rem;">→</span>
+  </div>
 
-> **Why it matters:** 
-> 내용 없음
+  <!-- News 3 -->
+  <div style="background: white; border-left: 4px solid #f1c40f; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+        <span style="background: #f1c40f; color: #333; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Anthropic</span>
+        <span style="color: #666; font-size: 0.85rem;">📅 2025.12.15</span>
+      </div>
+      <b style="font-size: 1rem; color: #333;">Claude MCP 프로토콜, 개발자 도구 통합 확대</b>
+    </div>
+    <span style="color: #f1c40f; font-size: 1.5rem;">→</span>
+  </div>
 
-### 4. SmolVLA: 커뮤니티 데이터로 학습한 소규모(450M) 오픈소스 시각-언어-행동(Vision-Language-Action) 로봇 모델 (feat. Hugging Face)
-허깅페이스 LeRobot 팀은 2025년 6월 3일 SmolVLA-450M을 공개했다. 이 모델은 4.5억 파라미터로 구성된 비전-언어-액션(VLA) 모델로, 공개 라이선스(아파치 2.0)와 가벼운 규모 덕분에 맥북·소비자-GPU에서도 실시간 제어가 가능하다. 사전 학습과 추론 전 과정을 오픈-소스로 제공해 로봇 연구·교육의 진입 장벽을 낮췄다.
-SmolVLA는 SmolVLM-2 백본(시그LIP 비전 인코더 + SmolLM-2 언어 디코더) 위에 약 1억 파라미터의 Flow-Matching 트랜스포머 액션 전문가를 얹었다. 시각 토큰을 64개로 줄이고 VLM 상위 절반 레이어를 생략해 지연을 절반으로 줄였으며, 비동기 추론 스택으로 로봇 실행과 예측을 병렬화해 30 % 더 빠른 작업 완료와 2배 처리량을 달성했다.
-모델은 **487개 커뮤니티 데이터셋(약 1,000만 프레임)**으로 사전 학습됐으며, 이 단계만으로 SO100 실제 작업 성공률이 51.7 %→78.3 %로 26.6 %p 상승했다. 그 결과, 시뮬레이션(LIBERO·Meta-World)과 실제 로봇(SO100·SO101) 모두에서 훨씬 큰 ACT 모델을 능가했고, 새로운 로봇 형태로의 일반화 테스트에서도 높은 성공률을 기록했다.
+  <!-- News 4 -->
+  <div style="background: white; border-left: 4px solid #27ae60; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+        <span style="background: #27ae60; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Open Source</span>
+        <span style="color: #666; font-size: 0.85rem;">📅 2025.12.14</span>
+      </div>
+      <b style="font-size: 1rem; color: #333;">DeepSeek V3, MMLU 벤치마크에서 GPT-4 추월</b>
+    </div>
+    <span style="color: #27ae60; font-size: 1.5rem;">→</span>
+  </div>
 
-> **Why it matters:** 
-> 대형 VLA 모델이 연구실 전용 GPU와 사유 데이터에 묶여 있던 흐름을 “소형·오픈·커뮤니티 데이터” 축으로 전환했다는 점. SmolVLA는 1 GPU·공개 데이터만으로 ACT-급 성능을 입증해 “로봇 파운데이션 모델=초대형”이라는 통념을 깨뜨렸고, 비동기 추론·레이어 스킵 등 LLM 효율화 아이디어를 로봇 제어로 확장. 이는 저비용·실시간 로봇 에이전트의 대중화를 앞당기며, 오픈 데이터 기여가 곧 모델 성능으로 이어지는 생태계 선순환을 촉발할 가능성이 커보임.
+  <!-- News 5 -->
+  <div style="background: white; border-left: 4px solid #9b59b6; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center;">
+    <div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+        <span style="background: #9b59b6; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem;">Regulation</span>
+        <span style="color: #666; font-size: 0.85rem;">📅 2025.12.13</span>
+      </div>
+      <b style="font-size: 1rem; color: #333;">EU AI Act 시행령 발표, 고위험 AI 규제 강화</b>
+    </div>
+    <span style="color: #9b59b6; font-size: 1.5rem;">→</span>
+  </div>
 
-### 5. C.O.R.E: 사용자의 지식과 상호작용할 수 있는, LLM을 위한 공유 가능한 메모리 시스템
-C.O.R.E는 사용자가 완전한 소유권을 갖는 공유 가능한 메모리 시스템. 사용자의 지식과 상호작용을 시계열 기반의 지식 그래프로 구성. Cursor, Claude 등의 툴과 연동이 가능하며, 특히 SOL이라는 개인 AI 어시스턴트와 결합하여 사용자의 선호, 사실 정보, 맥락을 기반으로 더 정확하고 맞춤형 응답을 제공할 수 있도록 지원합니다.
+</div>
+```
 
-> **Why it matters:** 
-> 외부에 종속되지 않으며, 사용자의 사적인 공간에서 맥락 기반의 데이터를 저장하고 활용할 수 있게 합니다. 사용자의 맥락 및 취향을 학습할 수 있도록 지원.  고급 개인 비서 및 협업 툴에서 특히 유용합니다.
+<br>
 
-## 2점
+<!-- Main Trend Chart -->
+::::{card} 📈 이번 주 주요 키워드 추이
+:class-header: bg-dark text-white
+:shadow: lg
 
-### 1. Eion: AI 에이전트용 공동 메모리 및 지식 그래프 저장소
-요약 없음
+**GPT-4 / RAG / Vector DB 7일간 언급량 변화**
 
-> **Why it matters:** 
-> 내용 없음
+```{mermaid}
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': { 'plotColorPalette': '#7289da, #43b581, #faa61a' },
+    'fontFamily': 'arial',
+    'darkMode': true
+  }
+}}%%
+xychart-beta
+    title "Weekly Keyword Trend"
+    x-axis ["11-09", "11-10", "11-11", "11-12", "11-13", "11-14", "11-15"]
+    y-axis "Volume" 0 --> 60
+    line [32, 28, 40, 52, 48, 55, 50]
+    line [18, 22, 24, 30, 35, 38, 36]
+    line [10, 12, 14, 18, 20, 25, 23]
+```
+<center>
+<span style="color:#7289da"><b>🔵 GPT-4</b></span> &nbsp;&nbsp;
+<span style="color:#43b581"><b>🟢 RAG</b></span> &nbsp;&nbsp;
+<span style="color:#faa61a"><b>🟠 Vector DB</b></span>
+</center>
+::::
 
-### 2. Context: macOS에서 MCP 서버 디버깅을 위한 네이티브 클라이
-MCP의 간단한 디버깅, 모니터링을 GUI에서 다루게 해주는 “Context” 소개
-2025_03 월 버전까지 호환
-지원 기능:
-stdio / HTTP+SSE / Streamable HTTP,
-OAuth 인증 및 메타데이터 탐색,
-툴 / 리소스 / 프롬프트 / 로그,
-미지원:
-Roots / Sampling / Completion 등 고급 기능
+<br>
 
-> **Why it matters:** 
-> Mcp에 대한 접근성을 높혀줌
+::::{div} p-3 bg-light border rounded mb-5 shadow-sm
+**Summary & Why it Matters**
+^^^
+Define evaluation criteria before implementing an AI application.
+::::
 
-### 3. Wrinkl: AI가 프로젝트의 맥락을 파악하고, 코드 및 문서를 일관성있게 작성하도록 돕는 AI 맥락 관리 시스템
-요약 없음
+## 📊 Analytics Deep Dive
 
-> **Why it matters:** 
-> 내용 없음
+::::{tab-set}
 
-## 1점
+:::{tab-item} 📋 Evidence Layer
+**Why it Matters**: 배포되었지만 평가할 수 없는 애플리케이션이 더 나쁩니다.
+> "투자 대비 수익(ROI)이 불확실한 AI 애플리케이션은 안타깝게도 흔합니다." - *Chip Huyen*
 
-### 1. Supabase MCP can leak your entire SQL database
-요약 없음
+```{mermaid}
+graph LR
+    A[Eval System] -->|Defines| B(Criteria)
+    A -->|Analyzes| C{ROI}
+    B --> D[Accuracy]
+    B --> E[Latency]
+    C -->|High| F[Approve]
+    C -->|Low| G[Reject]
+    style A fill:#f9f,stroke:#333
+    style F fill:#9f9,stroke:#333
+```
+:::
 
-> **Why it matters:** 
-> 내용 없음
-## 5점
+:::{tab-item} 🥧 Topic Share
+**Market Distribution**
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#7289da', 'pie2': '#43b581', 'pie3': '#faa61a', 'pie4': '#f04747' }}}%%
+pie showData
+    title AI Trends
+    "LLM Architecture" : 40
+    "Agent Frameworks" : 35
+    "Dev Tools (MCP)" : 15
+    "Robotics" : 10
+```
+:::
 
-### 1. Model context protocol (MCP)
-
-(요약) AI 봇, 에이전트들 간의 interface에 대한 표준을 제안함. *인간을 위한 html css, code/bot을 위한 json api graphql grpc, AI/LLM bot을 위한 interface 표준: ???*
-
-> **Why it matters:**
-해당 proposal 중 가장 novel함. 필요성이 크고, 성공적으로 ecosystem을 구축한다면 잠재적으로 매우 중요함.
-> 
-
-## 4점
-
-### 1. 에이전트 내 자연어 검색 품질 향상 기법 : Entity RAG, Knowledge-aware retrieval
-
-자연어 검색은 LLM 기술을 활용해 사용자의 질의를 문맥과 의도에 맞게 분석, 최적의 결과를 제공하는 기술임.  Entity RAG는 LLM의 최신 데이터 부족 문제를 보완하기 위해 경량검색으로 추출된 정보를 프롬프트에 삽입하여 개체 인식 정확도를 높임. Knowledge-aware retrieval은 사용자와 에이전트가 이해하는 키워드 및 테마 간 차이를 시맨틱 검색을 통해 연결, 적절한 검색결과를 반환함. 두 기법 모두 기존 키워드 검색의 한계를 극복하며, 복잡하거나 모호한 질의에 대해 더 정확한 결과 제공에 기여함. 향후 미디어, 뮤직 등 다양한 도메인에 적용 확대 및 개인화, 멀티모달 기술과 융합하여 검색추천 경험을 더욱 개선할 계획.
-
-> **Why it matters:
-- 최신 데이터 인식 보완:** Entity RAG 기법을 통해 LLM이 최신 데이터를 효과적으로 인식할 수 있어, 실제 서비스 환경에서 발생하는 최신 이슈나 신규 개체에 대해 보다 정확한 응답을 제공
-**- 의도 및 개체 인식 개선:** 사용자 질의의 문맥과 의도를 정교하게 분석하여 검색 결과의 품질을 높이는 기술은 LLM을 활용하는 모든 분야에서 핵심적인 역할을 함
-**- 다양한 도메인 적용 가능성:** 미디어, 뮤직, 증권 등 다양한 분야에 적용할 수 있으며, 특히 복잡하거나 모호한 질의에 대해 기존 방식보다 개선된 결과를 도출할 수 있음
-**- 시맨틱 검색과의 융합:** Knowledge-aware retrieval을 통해 사용자가 이해하는 키워드와 시스템 내부의 데이터 체계 간의 차이를 극복, 의미 기반 검색을 효과적으로 지원
-> 
-
-## 3점
-
-### 1. **MoA(Mixture-of-Agents, 에이전트 혼합 기법)**
-
-MoA(Mixture-of-Agents)는 LLM 자체를 변경하지 않고 프롬프트와 sampling options(예: temperature)만 조정하여 성능을 개선하는 기법이다. 여러 LLM 에이전트를 계층적으로 구성하며, 이전 계층의 출력을 기반으로 점진적으로 응답을 발전시킨다. 각 계층에는 제안자(Proposer)와 집계자(Aggregator)가 존재하며, 제안자는 초기 응답을 생성하고 집계자는 이를 종합하여 개선된 응답을 반환한다. 이러한 반복적 개선 과정을 통해 보다 정교한 최종 출력을 생성할 수 있다. MoA는 다양한 모델을 활용하여 협업적이고 효율적인 AI 응답 생성을 목표로 한다.
-
-> **Why it matters:
-1. 단일 LLM의 한계를 극복**
-여러 개의 LLM을 계층적으로 조합하여 개별 모델이 가진 약점을 보완하고, 더 정교한 응답을 생성
-2. **프롬프트 엔지니어링만으로 성능 향상 가능**
-모델 자체를 변경하거나 추가적인 fine-tuning 없이, 프롬프트와 샘플링 옵션(예: temperature)을 조정하는 방식으로 성능을 향상
-**모델 훈련 없이도 성능을 개선**할 수 있다는 장점이 있지만 여러 LLM을 계층적으로 사용하기에 발생하는 latency가 불가피할 것으로 보임
-> 
-
-### 2. Agentic Document Extraction
-
-**Agentic 문서 추출 기술**은 문서에서 정보를 추출하는 새로운 방식입니다. 기존의 OCR 기반 방법이나 텍스트 변환(text2text) 방식과 달리, 이 기술은 텍스트뿐만 아니라 체크박스, 그래프, 차트, 다이어그램, 표와 같은 시각적 요소까지 분석하여 문서의 의미를 포착합니다. 예를 들어, 흐름도에서 요소 간의 연결 관계를 이해하거나 차트에서 정보를 추출하는 데 유용합니다. 또한, 문서 내 구성 요소를 활용해 논리적으로 해석함으로써 독자가 저자가 전달하려는 내용을 더 쉽게 이해할 수 있도록 돕습니다.
-
-> **Why it matters:**
-오늘날의 문서는 단순한 텍스트뿐만 아니라 다양한 시각적 요소를 포함하고 있으며, 이러한 시각적 요소에는 중요한 데이터가 많이 담겨 있습니다. 그러나 기존 방식으로는 시각적 요소를 배제한 채 정보를 추출하기 때문에 불완전한 데이터 수집이 발생할 수 있습니다. Agentic 문서 추출 기술을 활용하면 보다 정확한 데이터 추출이 가능하며, 나아가 독자의 이해도를 평가하는 데에도 활용할 수 있습니다.
-> 
-
-## 2점
-
-### 1.Why can’t ChatGPT Draw full glass of wine?
-
-GPT는 실존하지 않는 유니콘을 그려냈지만 실존하는 가득찬 와인잔을 그려내지못했다.
-해당 영상은 경험주의 철학을 기반으로, 상상가능한것과 불가능한 것을 구분한다.
-GPT가 연속되는 색의 빈공간을 채우는 예시를 통해
-왜 유니콘은 가능하지만 가득찬 와인잔은 불가능한지 이유를 설명한다.
-
-> **Why it matters:**
-
-’AI의 창의력이 무엇인가?’ 에 대해 가볍게 보기 좋음
-> 
-
-## 1점
-
-### 1. **효율적인 벡터 검색 알고리즘 HNSW 알아보기**
-
-HNSW는 ANN(Approximate Nearest Neighbor)을 위한 알고리즘으로, KNN과 다르게 완벽하게 정확하지 않지만 빠른 벡터 검색을 위한 알고리즘입니다HNSW 제외하더라고 Annoy, LSH, Faiss와 같은 다른 ANN 방법론이 존재하지만, HNSW는 실시간 데이터 삽입이 가능하고, 상대적으로 낮은 메모리 사용량을 가지고 있기 때문에 다른 ANN 방법에 비해 범용적으로 사용하기 좋다. HNSW의 원리는 계층적 그래프 구조를 통해 최상위에서 하위로 내려갈 수록 더 많은 노드를 유지하여, 단계적으로 검색을 진행해 빠르게 탐색할 수 있게 한다. 
-
-> Why it matters
-> 
-
-RAG를 위해 핵심적인 요소인 Vector database가 사용하는 대표적인 방법들(HNSW, Annoy, LSH, FAISS)의 장단점을 비교하고, 다른 방법과 비교하여 HNSW가 더 적합한 이유와 HNSW의 알고리즘에 대한 개념적인 설명을 하고 있다
+:::{tab-item} 🛣️ Roadmap (Q3)
+**Development Milestones**
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcc00', 'secondaryColor': '#ff9900' }}}%%
+gantt
+    dateFormat  YYYY-MM-DD
+    section Backend
+    Database Setup       :a1, 2025-07-01, 7d
+    API Development      :after a1, 14d
+    section Frontend
+    Mockup Design        :2025-07-05, 5d
+    UI Implementation    :2025-07-12, 10d
+```
+:::
+::::
