@@ -13,7 +13,7 @@
     <!-- OpenAI Card -->
     <div style="background: white; border: 2px solid #10a37f; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/openai.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/openai.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">OpenAI</b>
       </div>
       <div style="background: #10a37f; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 92.4%</div>
@@ -27,7 +27,7 @@
     <!-- Google Card -->
     <div style="background: white; border: 2px solid #4285f4; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/google.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/google.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">Google</b>
       </div>
       <div style="background: #4285f4; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 91.9%</div>
@@ -41,7 +41,7 @@
     <!-- xAI Card -->
     <div style="background: white; border: 2px solid #d97706; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/xai.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/xai.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">xAI</b>
       </div>
       <div style="background: #d97706; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 87.5%</div>
@@ -55,7 +55,7 @@
     <!-- Anthropic Card -->
     <div style="background: white; border: 2px solid #0668e1; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/claude.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/claude.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">Anthropic</b>
       </div>
       <div style="background: #0668e1; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 87%</div>
@@ -69,7 +69,7 @@
     <!-- Alibaba Cloud Card -->
     <div style="background: white; border: 2px solid #1c3c3c; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/alibabacloud.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/alibabacloud.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">Alibaba</b>
       </div>
       <div style="background: #1c3c3c; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 77.5%</div>
@@ -83,7 +83,7 @@
     <!-- Meta Card -->
     <div style="background: white; border: 2px solid #7c3aed; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/meta.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/meta.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">Meta</b>
       </div>
       <div style="background: #7c3aed; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 73.7%</div>
@@ -97,7 +97,7 @@
     <!-- DeepSeek Card -->
     <div style="background: white; border: 2px solid #ef4444; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/deepseek.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/deepseek.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">DeepSeek</b>
       </div>
       <div style="background: #ef4444; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 71.5%</div>
@@ -111,7 +111,7 @@
     <!-- MistralAI Card -->
     <div style="background: white; border: 2px solid #06b6d4; border-radius: 12px; padding: 15px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
       <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-        <span style="font-size: 1.5rem;"><img src="_static/mistral.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
+        <span style="font-size: 1.5rem;"><img src="../../../../_static/mistral.png" style="width: 24px; height: 24px; position: relative; top: -2px;"></span>
         <b style="font-size: 1.1rem;">MistralAI</b>
       </div>
       <div style="background: #06b6d4; color: white; padding: 5px 10px; border-radius: 5px; font-size: 0.85rem; margin-bottom: 10px;">GPQA: 43.9%</div>

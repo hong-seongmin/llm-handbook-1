@@ -20,6 +20,7 @@ parse:
 
 sphinx:
   config:
+    html_static_path: ['_contents/assets/_static']
     extensions:
       - sphinx_togglebutton
       - sphinx_copybutton
