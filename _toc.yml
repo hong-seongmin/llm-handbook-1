@@ -13,7 +13,7 @@ parts:
   chapters:
   - file: _contents/llm-engineering/0. Prologue - What is LLM/0. Prologue - What is LLM.md
     sections:
-    - glob: _contents/llm-engineering/0. Prologue - What is LLM/sections/**
+    - glob: _contents/llm-engineering/0. Prologue - What is LLM/sections/Template example.md
     
 - caption: Newly Discovered
   chapters:
