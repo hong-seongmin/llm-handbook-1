@@ -3,3 +3,4 @@ matplotlib
 numpy
 lxml[html_clean]
 sphinxcontrib-mermaid
+sphinx-design
