@@ -1,4 +1,4 @@
-# 📕 Evaluating AI System
+# 📕Weekly News
 
 ### Your weekly digest of the most important developments in the LLM ecosystem.
 
