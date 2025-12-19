@@ -1,8 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: LLM Engineering Handbook
-author: "가짜연구소: 깃헙에에 NLP 잔디심기"
+title: Cherry in the Haystack - for LLM Engineers
+author: "가짜연구소: 깃헙에 NLP 잔디심기"
 # logo: logo.png
 
 # Force re-execution of notebooks on each build.
