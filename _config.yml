@@ -32,22 +32,22 @@ sphinx:
       - sphinx_external_toc
       - sphinxcontrib.mermaid
     html_theme_options:
-    announcement: |
-      <div style="display:flex; justify-content: center; align-items: center; gap: 12px;">
-        <span>🚀 JOIN WAITLIST</span>
-        <a href="https://forms.gle/9jF9SADw95V5H24t9"
-           target="_blank"
-           style="
-             background-color:#2563eb;
-             color:white;
-             padding:6px 14px;
-             border-radius:6px;
-             text-decoration:none;
-             font-weight:600;
-           ">
-          Join Waitlist
-        </a>
-      </div>
+      announcement: |
+        <div style="display:flex; justify-content: center; align-items: center; gap: 12px;">
+          <span>🚀 JOIN WAITLIST</span>
+          <a href="https://forms.gle/9jF9SADw95V5H24t9"
+             target="_blank"
+             style="
+               background-color:#2563eb;
+               color:white;
+               padding:6px 14px;
+               border-radius:6px;
+               text-decoration:none;
+               font-weight:600;
+             ">
+            Join Waitlist
+          </a>
+        </div>
 # Define the name of the latex output file for PDF builds
 latex:
   latex_documents:
