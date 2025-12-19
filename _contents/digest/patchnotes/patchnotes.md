@@ -2,17 +2,7 @@
 
 우리가 모으고 정제한 소식이, 핸드북 업데이트 페이지 어디에 업데이트 되었는지를 서술합니다. 
 LLM 테크의 주요 변경사항을 한 눈에 확인할 수 있습니다. 
+완성시 아래와 같은 화면이 나오게 됩니다 
 
+<img width="679" height="810" alt="image" src="https://github.com/user-attachments/assets/10f642ec-9e36-4231-9506-8bd3ac203783" />
 
-형식 예시
-
-**8/41일** 
-
-MCP 단원 - “유용한 MCP 서버”  - “윈도우즈 MCP 서버 플러그인”이 추가되었습니다.  (링크)
-Foundation Model 소개 단원 - OpenAI/GPT 섹션 - “GPT 3.5 - 더 이상 서비스되지 않음” 이유로 아카이브 되었습니다 (링크) 
-
----
-
-**7/99일** 
-
-MCP - Claude code - Hook/Plan 모드가 Update되었습니다.  (링크) 
