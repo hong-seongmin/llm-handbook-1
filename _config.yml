@@ -59,7 +59,7 @@ html:
 html_theme_options:
   announcement: |
     <div style="display:flex; justify-content: center; align-items: center; gap: 12px;">
-      <span>🚀</span>
+      <span>🚀 JOIN WAITLIST</span>
       <a href="https://forms.gle/9jF9SADw95V5H24t9"
          target="_blank"
          style="
