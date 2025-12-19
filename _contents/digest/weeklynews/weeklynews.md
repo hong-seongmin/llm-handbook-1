@@ -1,5 +1,5 @@
 # 📕 Weekly News Digest
-### Your weekly digest of the most important developments in the LLM ecosystem.
+**Your weekly digest of the most important developments in the LLM ecosystem.**
 
 <!-- Treemap with In-Block Drill-down -->
 ```{raw} html
