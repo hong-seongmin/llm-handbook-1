@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>LLM Buzz Treemap</title>
+</head>
+<body>
+
+<div style="font-family: Arial, sans-serif; margin-bottom: 2rem;">
+  <h3 style="text-align: center; margin-bottom: 1rem; color: #333;">
+    📊 LLM Buzz Share This Week
+    <span style="font-size:0.8rem; color:#666;">(클릭해서 확대)</span>
+  </h3>
+
+  <div id="treemap-container"
+       style="position: relative; height: 360px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+    <div id="treemap-normal"
+     style="position:relative; height:100%; width:100%; padding:6px; box-sizing:border-box;">
+    </div>
+
+
+    <div id="treemap-zoom"
+         style="display:none; position:absolute; inset:0; padding:16px; box-sizing:border-box;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h4 id="zoom-title" style="margin:0;"></h4>
+        <button onclick="zoomOut()"
+                style="background: rgba(255,255,255,0.25); border: none; color: #fff; padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+          ← 돌아가기
+        </button>
+      </div>
+
+      <div id="zoom-grid"
+           style="display:flex; gap:10px; flex-wrap:wrap; height: calc(100% - 48px); overflow:auto; padding-right:6px;">
+      </div>
+    </div>
+  </div>
+
+
+  <h3 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color:#333;">⭐ Top 5 Important News
+    <span style="font-size:0.8rem; color:#666;">(자동 선정 · 필요하면 수동 지정 가능)</span>
+  </h3>
+  <div style="display:flex; gap:8px; justify-content:flex-end; margin-bottom:10px;">
+    <button onclick="editTopPicks()"
+      style="background:#333; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer;">Top 편집</button>
+    <button onclick="resetTopPicks()"
+      style="background:#eee; color:#333; border:1px solid #ddd; padding:8px 12px; border-radius:8px; cursor:pointer;">자동으로 되돌리기</button>
+  </div>
+  <div id="top-news" style="display:flex; flex-direction:column; gap:12px; margin-bottom: 24px;"></div>
+
+  <script src="./app.js"></script>
+</div>
+
+</body>
+</html>
