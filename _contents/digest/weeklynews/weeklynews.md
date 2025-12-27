@@ -1,5 +1,5 @@
 # 📕 Weekly News Digest
-**Your weekly digest of the most important developments in the LLM ecosystem.**
+### Your weekly digest of the most important developments in the LLM ecosystem.
 
 <!-- Treemap with In-Block Drill-down -->
 ```{raw} html
@@ -107,41 +107,70 @@
 </div>
 ```
 
-<!-- Dashboard KPI Section -->
-::::{grid} 4
-:gutter: 3
+<!-- Dashboard Stats + Trending Keywords -->
+```{raw} html
+<style>
+  @media (max-width: 700px) {
+    .stats-row { flex-direction: column !important; }
+    .trending-row1 { flex-direction: column !important; gap: 10px !important; }
+    .trending-row2 { justify-content: center !important; gap: 12px !important; }
+  }
+</style>
 
-:::{grid-item-card} 총 뉴스 수
-:class-header: bg-dark text-white text-center font-weight-bold
-:class-body: bg-secondary text-white text-center
-:shadow: md
-## 685건
-{badge}`+18% 🟢`
-:::
+<div style="font-family: Arial, sans-serif; margin-bottom: 2rem;">
+  
+  <!-- Small Stats Row -->
+  <div class="stats-row" style="display: flex; gap: 15px; margin-bottom: 20px;">
+    <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px 18px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="color: #475569; font-size: 1rem; font-weight: 500; white-space: nowrap;">총 뉴스 수</span>
+      <span style="font-weight: bold; font-size: 1.2rem; color: #1e293b; white-space: nowrap;">685건 <span style="color: #16a34a; font-size: 0.9rem; font-weight: 600;">+18%</span></span>
+    </div>
+    <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px 18px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="color: #475569; font-size: 1rem; font-weight: 500; white-space: nowrap;">신규 키워드</span>
+      <span style="font-weight: bold; font-size: 1.2rem; color: #1e293b; white-space: nowrap;">42개 <span style="color: #16a34a; font-size: 0.9rem; font-weight: 600;">+9%</span></span>
+    </div>
+    <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px 18px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="color: #475569; font-size: 1rem; font-weight: 500; white-space: nowrap;">커버리지 출처</span>
+      <span style="font-weight: bold; font-size: 1.2rem; color: #1e293b; white-space: nowrap;">31개</span>
+    </div>
+  </div>
 
-:::{grid-item-card} 신규 키워드
-:class-header: bg-dark text-white text-center font-weight-bold
-:class-body: bg-secondary text-white text-center
-:shadow: md
-## 42개
-{badge}`+9% 🟢`
-:::
+  <!-- Prominent Trending Keywords - Compact 2 Row Layout -->
+  <div style="background: linear-gradient(135deg, #0f172a, #1e293b); border-radius: 12px; padding: 20px 24px; color: white;">
+    <!-- Row 1: Title + Top Keyword -->
+    <div class="trending-row1" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <div style="display: flex; align-items: center; gap: 8px; white-space: nowrap;">
+        <span style="font-size: 1.1rem;">🔥</span>
+        <span style="font-size: 1rem; color: #f8fafc; font-weight: 600;">급상승 키워드</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; white-space: nowrap;">
+        <span style="background: #ef4444; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">+245%</span>
+        <span style="font-size: 1.6rem; font-weight: bold; color: #ffffff;">MCP Protocol</span>
+      </div>
+    </div>
+    <!-- Row 2: Other Keywords -->
+    <div class="trending-row2" style="display: flex; justify-content: flex-end; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+        <span style="background: #f97316; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">+189%</span>
+        <span style="font-size: 1.1rem; font-weight: bold; color: #f1f5f9;">DSPy</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+        <span style="background: #eab308; color: #1e293b; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">+156%</span>
+        <span style="font-size: 1rem; font-weight: bold; color: #e2e8f0;">LangGraph</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+        <span style="background: #22c55e; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">+134%</span>
+        <span style="font-size: 0.95rem; font-weight: bold; color: #cbd5e1;">Gemini 2.0</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 6px; white-space: nowrap;">
+        <span style="background: #3b82f6; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: 600;">+98%</span>
+        <span style="font-size: 0.9rem; font-weight: bold; color: #94a3b8;">Claude 3.5</span>
+      </div>
+    </div>
+  </div>
 
-:::{grid-item-card} 급상승 키워드
-:class-header: bg-dark text-white text-center font-weight-bold
-:class-body: bg-secondary text-white text-center
-:shadow: md
-## 9개
-{badge}`+3% 🟢`
-:::
-
-:::{grid-item-card} 커버리지 출처
-:class-header: bg-dark text-white text-center font-weight-bold
-:class-body: bg-secondary text-white text-center
-:shadow: md
-## 31개
-:::::
-::::
+</div>
+```
 
 <br>
 
@@ -215,3 +244,91 @@
 
 <br>
 
+<!-- Main Trend Chart -->
+::::{card} 📈 이번 주 주요 키워드 추이
+:class-header: bg-dark text-white
+:shadow: lg
+
+**GPT-4 / RAG / Vector DB 7일간 언급량 변화**
+
+```{mermaid}
+%%{init: {
+  'theme': 'base',
+  'themeVariables': {
+    'xyChart': { 'plotColorPalette': '#7289da, #43b581, #faa61a' },
+    'fontFamily': 'arial',
+    'darkMode': true
+  }
+}}%%
+xychart-beta
+    title "Weekly Keyword Trend"
+    x-axis ["11-09", "11-10", "11-11", "11-12", "11-13", "11-14", "11-15"]
+    y-axis "Volume" 0 --> 60
+    line [32, 28, 40, 52, 48, 55, 50]
+    line [18, 22, 24, 30, 35, 38, 36]
+    line [10, 12, 14, 18, 20, 25, 23]
+```
+<center>
+<span style="color:#7289da"><b>🔵 GPT-4</b></span> &nbsp;&nbsp;
+<span style="color:#43b581"><b>🟢 RAG</b></span> &nbsp;&nbsp;
+<span style="color:#faa61a"><b>🟠 Vector DB</b></span>
+</center>
+::::
+
+<br>
+
+::::{div} p-3 bg-light border rounded mb-5 shadow-sm
+**Summary & Why it Matters**
+^^^
+Define evaluation criteria before implementing an AI application.
+::::
+
+## 📊 Analytics Deep Dive
+
+::::{tab-set}
+
+:::{tab-item} 📋 Evidence Layer
+**Why it Matters**: 배포되었지만 평가할 수 없는 애플리케이션이 더 나쁩니다.
+> "투자 대비 수익(ROI)이 불확실한 AI 애플리케이션은 안타깝게도 흔합니다." - *Chip Huyen*
+
+```{mermaid}
+graph LR
+    A[Eval System] -->|Defines| B(Criteria)
+    A -->|Analyzes| C{ROI}
+    B --> D[Accuracy]
+    B --> E[Latency]
+    C -->|High| F[Approve]
+    C -->|Low| G[Reject]
+    style A fill:#f9f,stroke:#333
+    style F fill:#9f9,stroke:#333
+```
+:::
+
+:::{tab-item} 🥧 Topic Share
+**Market Distribution**
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'pie1': '#7289da', 'pie2': '#43b581', 'pie3': '#faa61a', 'pie4': '#f04747' }}}%%
+pie showData
+    title AI Trends
+    "LLM Architecture" : 40
+    "Agent Frameworks" : 35
+    "Dev Tools (MCP)" : 15
+    "Robotics" : 10
+```
+:::
+
+:::{tab-item} 🛣️ Roadmap (Q3)
+**Development Milestones**
+```{mermaid}
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcc00', 'secondaryColor': '#ff9900' }}}%%
+gantt
+    dateFormat  YYYY-MM-DD
+    section Backend
+    Database Setup       :a1, 2025-07-01, 7d
+    API Development      :after a1, 14d
+    section Frontend
+    Mockup Design        :2025-07-05, 5d
+    UI Implementation    :2025-07-12, 10d
+```
+:::
+::::
